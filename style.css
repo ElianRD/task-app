@@ -33,12 +33,12 @@ html{
 
 }
 .section{
-    flex: 1 1 320px;
+    flex: 1 1 350px;
 }
 .form-container{
     width: 90%;
     min-width: 280px;
-    max-width:400px;
+    max-width:450px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -63,14 +63,54 @@ html{
 .form__title{
     width: 100%;
     margin: 10px 0 ;
+    padding: 10px;
+    font-size: 1.8rem;
 }
 .form__description{
+    padding: 10px;
     width: 100%;
+    font-size: 1.4rem;
 
     
 }
 .form-boton{
     width: 100px;
-    padding: 5px;
+    padding: 10px;
     margin: 10px 0 5px 0;
+    background-color: rgb(43, 43, 48);
+    color: white;
+    font-size: 1.6rem;
+}
+.tasks{
+    
+
+}
+.task-container{
+    background-color: aqua;
+    margin: 15px auto;
+    width: 90%;
+    height: auto;
+    text-align: center;
+    padding: 15px;
+    max-width: 400px;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Muestra puntos suspensivos al final del texto cortado */
+    /* Otros estilos necesarios para la apariencia del contenedor */
+
+}
+.task-container__title{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.4rem;
+
+}
+.task-container__description{
+
+}
+.task-container__delete{
+
+}
+.task-container__edit{
+
 }
