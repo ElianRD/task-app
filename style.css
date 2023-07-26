@@ -1,0 +1,76 @@
+:root{
+    --size: 10px;
+}
+
+html{
+    font-size: 10px;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.header{
+    width: 100%;
+    min-width: 320px;
+    height: 60px;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+.header__title{
+    font-size: 2rem;
+
+}
+.main{
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+.section{
+    flex: 1 1 320px;
+}
+.form-container{
+    width: 90%;
+    min-width: 280px;
+    max-width:400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border: 2px solid gray;
+    margin: 20px;
+
+}
+.formTask{
+    width: 90%;
+    text-align: center;
+}
+.form__title{
+    width: 100%;
+    margin: 10px 0 ;
+}
+.form__description{
+    width: 100%;
+
+    
+}
+.form-boton{
+    width: 100px;
+    padding: 5px;
+    margin: 10px 0 5px 0;
+}
