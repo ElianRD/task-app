@@ -1,10 +1,13 @@
 document.getElementById("form").addEventListener("submit", saveTask);
 
+document.querySelector(".btn-show").addEventListener("click", getTask);
+document.querySelector(".btn-hide").addEventListener("click", deleteAll);
 
 
 function saveTask(e){
     let title = document.querySelector(".form__title").value
     let description = document.querySelector(".form__description").value
+    
     const task = {
         title,
         description,
@@ -21,6 +24,10 @@ function saveTask(e){
         
         
     }
+    let show = document.querySelector(".btn-show")
+    show.style.display = "none"
+    let hide = document.querySelector(".btn-hide")
+    hide.style.display = "block"
     getTask()
     title.innerHTML = ""
     description.innerHTML= ""
@@ -47,12 +54,13 @@ function getTask(){
         let deleteBoton = document.createElement("button")
         deleteBoton.textContent = "Eliminar";
         deleteBoton.id = index
+        deleteBoton.classList.add("task-container__delete")
         deleteBoton.onclick= function() {
             deleteTask(index); // Llamamos a la función deleteTask y pasamos el índice como argumento
           };
         
         let editBoton = document.createElement("button")
-        editBoton.textContent = "editar";
+        editBoton.textContent = "Editar";
         editBoton.onclick = "deletetask(index)"
         editBoton.classList.add("task-container__edit")
         editBoton.onclick= function() {
@@ -67,24 +75,42 @@ function getTask(){
 
     });
     blockTaks.append(...allTask)
+    
+    let show = document.querySelector(".btn-show")
+    show.style.display = "none"
+    let hide = document.querySelector(".btn-hide")
+    hide.style.display = "block"
 }
 
 function deleteTask(index) {
     let tasks = JSON.parse(localStorage.getItem("task"))
     tasks.splice(index,1)
     localStorage.setItem("task",JSON.stringify(tasks))
-    let title = document.querySelector(".form__title")
-    title.value = "idid"
     getTask()
-
+    
 }
 
 
 function editTask(index) {
     let tasks = JSON.parse(localStorage.getItem("task"))
-    let title = document.querySelector(".form__title")
     let description = document.querySelector(".form__description")
+    let title = document.querySelector(".form__title")
     title.value = tasks[index].title
     description.value = tasks[index].description
+    tasks.splice(index,1)
+    localStorage.setItem("task",JSON.stringify(tasks))
+    ///no ejecute hasta que se haga click en el boton de guardar 
+
+    
+}
+function deleteAll(){
+    let show = document.querySelector(".btn-show")
+    show.style.display = "block"
+    let hide = document.querySelector(".btn-hide")
+    hide.style.display = "none"
+    let container = document.querySelector(".tasks")
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+      }
 
 }

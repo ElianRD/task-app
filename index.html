@@ -9,7 +9,7 @@
 <body>
      <header class="header"> 
         <nav>
-            <a class="header__title" href="">tasks app</a>
+            <a class="header__title" href="">tasks app <span></span></a>
         </nav>
      </header>
      <main class="main">
@@ -17,18 +17,21 @@
             <div class="form-container">
                 <form id="form">
                     <div class="formTask">
-                        <input class="form__title" type="text" placeholder="titulo" >
+                        <input class="form__title" type="text"  placeholder="titulo" required>
                     </div>
                     <div class="formTask">
-                        <textarea class="form__description" name="" id="" cols="20" rows="10" placeholder="descripcion"></textarea>
+                        <textarea class="form__description" name="" id="" cols="20" rows="15" placeholder="descripcion"></textarea>
                     </div>
                         
-                        <button class="form-boton" type="submit" >save</button>  
+                        <button class="form-boton" type="submit" >Guardar</button>  
                 </form>
             </div>
         </section>
 
         <section class="main-task section">
+            <div class="btn-task">
+                <button class="btn-show">Mostrar Tareas</button><button class="btn-hide">Ocultar Tareas </button>
+            </div>
             <div class="tasks"></div>
         </section>
 

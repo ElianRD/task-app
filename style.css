@@ -4,6 +4,7 @@
 
 html{
     font-size: 10px;
+    background-color: #CFF8FB;
 }
 
 *,
@@ -20,9 +21,19 @@ html{
     background-color: whitesmoke;
     padding: 20px;
 }
+
 .header__title{
     font-size: 2rem;
+    text-decoration: none;
+    color: #141414;
 
+}
+.header__title span{
+    display: inline-block;
+    width: 30px;
+    height: 32px;
+    background-image: url(./img/note-task-comment-message-edit-write_108613\ \(1\).png);
+    vertical-align:middle;
 }
 .main{
     width: 100%;
@@ -44,6 +55,7 @@ html{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 #form{
@@ -52,8 +64,11 @@ html{
     justify-content: center;
     align-items: center;
     width: 90%;
-    border: 2px solid gray;
+    background-color: white ;
+    border: 1px solid #e7e7e7;
     margin: 20px;
+    border-radius: 15px;
+    position: relative;
 
 }
 .formTask{
@@ -62,15 +77,24 @@ html{
 }
 .form__title{
     width: 100%;
-    margin: 10px 0 ;
+    margin: 25px 0 20px 0 ;
     padding: 10px;
     font-size: 1.8rem;
+    background-color: #F5F4F4;
+    border-radius: 15px;
+    border: none;
+    
 }
 .form__description{
     padding: 10px;
     width: 100%;
     font-size: 1.4rem;
     resize: none;
+    background-color: #F5F4F4;
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 25px;
+
 
     
 }
@@ -78,17 +102,56 @@ html{
     width: 100px;
     padding: 10px;
     margin: 10px 0 5px 0;
-    background-color: rgb(43, 43, 48);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(90, 221, 228);
     font-size: 1.6rem;
+    position: absolute;
+    bottom: -60px;
+    border: none;
+    border-radius: 45px;
+}
+.btn-task{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    min-width: 320px;
+    
+}
+.btn-show{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 15px;
+    background-color: #FFF;
+    border: 1PX solid rgb(206, 206, 206);
+    color: cadetblue;
+    box-shadow: 1px 2px 3px #4d4a4a;
+    
+    
+    
+    
+}
+.btn-hide{
+    
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 15px;
+    display: none;
+    border: none;
+    background-color: #FFF;
+    color: cadetblue;
+    border: 1px solid rgb(206, 206, 206);
+    box-shadow: 1px 2px 3px #4d4a4a;
+
 }
 
-/* .tasks{
-    width: 90%;
+.tasks{
+    min-width: 320px;
     margin: 0 auto;
     
 
-} */
+} 
 .task-container{
     width: 90%;
     height: auto;
@@ -98,26 +161,59 @@ html{
     padding: 15px;
     max-width: 500px;
     overflow-wrap: break-word;
-    background-color: aqua;
-    border: 1px solid black;
+    background-color:rgb(255, 255, 255);
+    border: 1px solid #e7e7e7;
+    border-radius: 14px;
     
 
 }
 .task-container__title{
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.4rem;
     margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
 
 }
 .task-container__description{
-    font-size: 1.2rem;
-    line-height: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
 
 }
 .task-container__delete{
-
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    padding: 0.3em 0.7em;
+    border-radius:15px;
+    background-color: #fbb1b1;
+    border: 1px solid #ffdddd;
+    transition: all .3s;
+    box-shadow: 1px 2px 6px #4d4a4a;
+    cursor: pointer;
+    margin: 20px 10px 0 20px;
 }
-.task-container__edit{
+.task-container__delete:hover{
+    box-shadow: -6px -6px 12px #c1c1c1, 6px 6px 12px #FFF;
+    transform: scale(1.2);
+}
 
+.task-container__edit{
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    padding: 0.3em 0.7em;
+    border-radius:15px;
+    background-color: #bedbe4;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 1px 2px 6px #292828;
+    cursor: pointer;
+    margin: 20px 10px 0 20px;
+}
+
+.task-container__edit:hover{
+    box-shadow: -6px -6px 12px #c1c1c1, 6px 6px 12px #FFF;
+    transform: scale(1.2);
 }
